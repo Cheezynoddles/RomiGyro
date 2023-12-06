@@ -4,6 +4,8 @@
 
 package frc.robot;
 
+import edu.wpi.first.cameraserver.CameraServer;
+import edu.wpi.first.cscore.UsbCamera;
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.XboxController;
@@ -24,6 +26,8 @@ import edu.wpi.first.wpilibj2.command.PrintCommand;
 import edu.wpi.first.wpilibj2.command.RunCommand;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
+import edu.wpi.first.cameraserver.CameraServer;
+import edu.wpi.first.cscore.*;
 
 /**
  * This class is where the bulk of the robot should be declared. Since Command-based is a
@@ -54,7 +58,8 @@ public class RobotContainer {
   //
   // Your subsystem configuration should take the overlays into account
 
-  /** The container for the robot. Contains subsystems, OI devices, and commands. */
+  // The container for the robot. Contains subsystems, OI devices, and commands.
+
   public RobotContainer() {
     // Configure the button bindings
     configureButtonBindings();
@@ -86,6 +91,7 @@ public class RobotContainer {
     m_chooser.addOption("Figure 8", new FigureEight(m_drivetrain, 0.5));
     SmartDashboard.putData(m_chooser);
   }
+
 
   /**
    * Use this to pass the autonomous command to the main {@link Robot} class.

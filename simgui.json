@@ -24,6 +24,14 @@
   "NetworkTables": {
     "Persistent Values": {
       "open": false
+    },
+    "transitory": {
+      "CameraPublisher": {
+        "open": true,
+        "rPi Camera 0": {
+          "open": true
+        }
+      }
     }
   }
 }
